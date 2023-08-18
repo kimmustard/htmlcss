@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="di">
+        <button id="btn1" type="button">엘리먼트 만들기</button> <br>
+    </div>
+</body>
+
+<script>
+    let btn = document.getElementById('btn1');
+
+    // document.getElementById('btn1').addEventListener('click', () => {
+    //     document.getElementById('di').innerHTML += `<button id="btn2" type="button" onclick="test()"> 생성된 버튼 </button> <br>
+    //     `
+    // })
+
+    // function test() {
+    //     document.getElementById('hi').innerHTML += '생성된 버튼을 클릭함!';
+    // }
+
+
+    document.getElementById('btn1').addEventListener('click', () => {
+        document.getElementById('di').innerHTML += `<button id="btn2" type="button" id="btn2"> 생성된 버튼 </button> <br>
+         <h2 id="hi"> </h2> 
+        `
+        document.getElementById('btn2').addEventListener('click', () => {
+            document.getElementById('hi').innerText += '생성된 버튼을 클릭함.';
+        })
+    })
+
+    //첫 화면 시점에 newBtn id가 없으면 안됨.
+    //document.getElementById('newBtn').addEventListener
+    //동적으로 생성된 엘리먼트에 이벤트를 부여
+    //문서 전체에 리스너를 장착
+
+
+
+
+
+    document.addEventListener('click', (e) => {
+        console.log(e.target.id);
+        if (e.target.id == 'btn2') {
+            document.getElementById('zone').innerHTML +=
+                `<h3> 생성된 버튼을 클릭함</h3>`;
+        }
+    })
+
+
+
+
+
+
+
+
+</script>
+
+</html>

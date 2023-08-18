@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>계산기</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #1f1f1f1f;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .calculator {
+            border: 1px solid #333;
+            background-color: #ccc;
+            padding: 5px;
+        }
+
+        .calculator form {
+            display: grid;
+            grid-template-columns: repeat(4, 65px);
+            grid-auto-rows: 65px;
+            gap: 5px;
+        }
+
+        .calculator form button,
+        input {
+            font-size: 1rem;
+            /* font-weight: bold; */
+            border: 2px solid black;
+            cursor: pointer;
+            padding: 5px;
+        }
+
+        .calculator form button:hover {
+            box-shadow: 1px 1px 2px #333;
+        }
+
+        .calculator form .clear {
+            background-color: orangered;
+        }
+
+        .calculator form .operator {
+            background-color: orange;
+        }
+
+        .calculator form .dot {
+            background-color: greenyellow;
+        }
+
+        .calculator form input[type='text'] {
+            grid-column: span 4;
+            text-align: right;
+            background-color: white;
+        }
+
+        .calculator form .clear {
+            grid-column: span 3;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .calculator form .result {
+            grid-column: span 2;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="calculator">
+        <form name="forms">
+            <input type="text" id="output" name="output">
+            <button type="button" class="clear" value="C">C</button>
+            <button type="button" class="operator" value="/">/</button>
+            <button type="button" class="number" value="1">1</button>
+            <button type="button" class="number" value="2">2</button>
+            <button type="button" value="3">3</button>
+            <button type="button" class="operator" value="*">*</button>
+            <button type="button" value="4">4</button>
+            <button type="button" value="5">5</button>
+            <button type="button" value="6">6</button>
+            <button type="button" class="operator" value="+">+</button>
+            <button type="button" value="7">7</button>
+            <button type="button" value="8">8</button>
+            <button type="button" value="9">9</button>
+            <button type="button" class="operator" value="-">-</button>
+            <button type="button" class="dot" value=".">.</button>
+            <button type="button" value="0">0</button>
+            <button type="button" class="operator result" id="result" value="=">=</button>
+        </form>
+    </div>
+
+
+
+
+    <script>
+        let numbers = [];   //결과
+        let numbers2 = [];  //숫자 변환
+        let numbers3 = [];  //연산 모으기
+        let str1 = 0;
+        let str = 0;
+
+
+
+
+
+        document.addEventListener('click', (e) => {
+
+            cross2();
+
+
+            if (e.target.value == 'C') {
+                numbers = [];
+                numbers2 = [];
+                numbers3 = [];
+                return;
+            }
+
+
+            if (e.target.value != undefined) {
+                if (e.target.value == '/' || e.target.value == '*' || e.target.value == '+' ||
+                    e.target.value == '-' || e.target.value == '.') {
+                    cross();
+
+                    numbers3.push(e.target.value);
+                    numbers2 = [];
+
+
+                } else {
+                    numbers2.push(e.target.value);
+                }
+
+            }
+
+
+            console.log(numbers);
+            console.log(numbers2);
+            console.log(numbers3);
+
+
+        })
+
+
+        document.getElementById('result').addEventListener('click', () => {
+            for (let i = 0; i < numbers.length; i++) {
+                str1 += numbers[i];
+            }
+            console.log(str1);
+        })
+
+        function cross2() {
+
+            str = 0;
+            if (numbers3.length >= 3) {
+                if (numbers3[1] == '+') {
+                    str = Number(numbers3[0]) + Number(numbers3[2]);
+                    numbers3 = [];
+                    numbers.push(str);
+                }
+            }
+        }
+
+
+        function cross() {
+
+
+
+            let sum = 0;
+            for (let i = 0; i < numbers2.length; i++) {
+                sum += numbers2[i];
+            }
+            let sum2 = Number(sum);
+            numbers3.push(sum2);
+
+
+
+        }
+
+
+
+
+    </script>
+
+
+</body>
+
+<script>
+
+</script>
+
+</html>
