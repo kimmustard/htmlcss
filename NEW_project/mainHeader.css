@@ -1,0 +1,1051 @@
+@import url(reset.css);
+
+@font-face {
+    font-family: "현대폰트";
+    src: url(/font/현대하모니+L.ttf);
+}
+@font-face {
+    font-family: "현대폰트m";
+    src: url(/font/현대하모니+M.ttf);
+}
+
+
+@font-face {
+    font-family: "나눔고딕";
+    src: url(/font/NanumGothic-Regular.ttf);
+}
+
+@font-face {
+    font-family: "나눔고딕bold";
+    src: url(/font/NanumGothic-Bold.ttf);
+}
+
+html {
+    /* 드래그 방지 */
+    -ms-user-select: none;
+    -moz-user-select: -moz-none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+}
+
+
+li {
+    font-family: "현대폰트";
+    font-style: italic;
+    font-size: 17px;
+}
+
+
+
+
+body {
+    width: 100%;
+}
+
+section {
+    z-index: -5;
+}
+
+header {
+    position: fixed;
+    background-image: url(/pictures/bgc투명.png);
+    height: 80px;
+    width: 100%;
+    z-index: 10;
+
+}
+
+/**********************main 헤더 모음**************************/
+
+.headerContainer {
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.headerContainer:hover {
+    background-color: rgba(255, 255, 255, 0.92);
+}
+
+.headerContainer2 {
+    background-color: rgba(255, 255, 255, 0.92);
+    height: 80px;
+    display: flex;
+    justify-content: center;
+}
+
+.headerContainer2>#inputSearch {
+    margin: auto;
+}
+
+
+/* 메인[일반메뉴1 div] */
+#mainLogo {
+    cursor: pointer;
+    margin-left: 13%;
+    margin-top: 25px;
+
+}
+
+.loginContainer {
+    margin-right: 13%;
+}
+
+
+.boxContainer,
+.loginContainer {
+    list-style: none;
+    display: flex;
+    margin-top: 30px;
+}
+
+.boxContainer {
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+
+
+.headerContainer>.boxContainer>li {
+    margin-left: 15px;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+/* 메인[일반메뉴2 div] */
+
+.headerContainer>.loginContainer>li {
+    margin-left: 30px;
+    cursor: pointer;
+
+}
+
+#lgText {
+    font-weight: 700;
+}
+
+.bi-list {
+    position: absolute;
+    right: 215px;
+    top: 20px;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+/****************************************************************/
+
+
+
+
+
+/************main hearder 반응형 search *********/
+
+
+#inputSearch {
+    position: relative;
+    padding-left: 20px;
+    font-size: 20px;
+    font-weight: 600;
+    outline: none;
+    border: none;
+    margin: 10px 20px;
+    width: 500px;
+    height: 40px;
+}
+
+.bi1,
+.bi2 {
+    cursor: pointer;
+    position: absolute;
+}
+
+.bi1 {
+    font-weight: 700;
+    margin-top: 30px;
+    right: 705px;
+
+}
+
+.bi2 {
+    color: rgb(168, 168, 168);
+    margin-top: 30px;
+    right: 740px;
+}
+
+#loginPageList {
+    position: absolute;
+    right: 280px;
+    top: 70px;
+    background-color: white;
+    width: 125px;
+    height: 100px;
+    border-radius: 20px;
+    border: 1px solid rgb(192, 192, 192);
+    display: none;
+}
+
+#loginPageList>li {
+    font-family: "현대폰트";
+    cursor: pointer;
+    margin-top: 15%;
+    font-size: 16px;
+    text-align: center;
+
+}
+
+a:visited {
+    color: black;
+    text-decoration: none;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+}
+
+
+
+#bgcOverray {
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+
+
+/*************************************************/
+
+
+/*********************************footer div *********************************/
+
+footer {
+
+    background-color: rgb(28, 28, 28);
+    margin-top: 100%;
+
+}
+
+
+
+.footerContainer {
+    padding-top: 50px;
+    padding-bottom: 30px;
+    margin-right: 20%;
+    margin-left: 20%;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid gray;
+}
+
+
+.footerMenu1 {
+    margin-left: -100px;
+}
+
+
+.footerList1,
+.footerList2,
+.footerList3,
+.footerList4 {
+    padding: 2px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: row;
+}
+
+.footerList1>li,
+.footerList2>li,
+.footerList3>li {
+    font-size: 14px;
+    font-style: initial;
+    color: rgb(182, 182, 182);
+
+}
+
+.footerList4>li {
+    font-size: 12px;
+    font-style: initial;
+    color: rgb(182, 182, 182);
+}
+
+.footerList1>li::after,
+.footerList2>li::after,
+.footerList3>li::after {
+    content: "|";
+    float: right;
+    display: block;
+}
+
+.footerList1>li:last-child::after,
+.footerList2>li:last-child::after,
+.footerList3>li:last-child::after {
+    content: "";
+    float: right;
+    display: block;
+}
+
+
+.footerList5 {
+    display: flex;
+}
+
+.footerList5>li {
+    margin: 10px;
+}
+
+
+.footerContainer2 {
+    margin-right: 20%;
+    margin-left: 20%;
+    display: flex;
+
+}
+
+
+
+.footerList6 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    margin-top: 25px;
+}
+
+
+.footerList6>li {
+    color: rgb(182, 182, 182);
+    font-size: 13px;
+    margin-right: 30px;
+    padding: 10px;
+}
+
+
+
+
+
+/*****************************************************************************/
+
+
+
+
+
+
+
+
+/*************************슬라이드 페이지*************************/
+
+
+
+/* 버튼 */
+
+
+#rightBtn,
+#leftBtn {
+    margin: 100px;
+    margin-top: 22%;
+    width: 300px;
+    height: 100px;
+    position: absolute;
+    display: flex;
+    color: rgb(214, 216, 219);
+
+}
+
+.leftBtn,
+.rightBtn {
+    font-size: 60px;
+    font-weight: 0;
+    margin-top: 13px;
+    z-index: -1;
+}
+
+#rightBtn {
+
+    display: flex;
+    justify-content: right;
+    right: 0%;
+}
+
+#leftBtn>span,
+#rightBtn>span {
+    display: inline-block;
+    margin-top: 35px;
+    z-index: -1;
+}
+
+#leftBtn {
+    left: 0%;
+}
+
+.btnSliderContainer {
+    position: relative;
+}
+
+
+/* 슬라이드 사진  */
+#picAll {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+
+@keyframes move1 {
+    from {
+        left: 80%;
+    }
+
+    to {
+        left: 17%;
+    }
+}
+
+@keyframes move2 {
+    from {
+        right: 80%;
+    }
+
+    to {
+        right: 0%;
+    }
+}
+
+@keyframes textmove1 {
+    from {
+        right: 100%;
+    }
+
+    to {
+        right: 10%;
+    }
+}
+
+@keyframes textmove2 {
+    from {
+        left: 100%;
+    }
+
+    to {
+        left: 20%;
+    }
+}
+
+@keyframes textmove3 {
+    from {
+        left: 100%;
+    }
+
+    to {
+        left: 20%;
+    }
+}
+
+@keyframes textmove4 {
+    from {
+        top: 0%;
+    }
+
+    to {
+        left: 40%;
+    }
+}
+
+#car1,
+#car2,
+#car3,
+#car4,
+#car5,
+#car6 {
+    position: absolute;
+    top: 20%;
+    display: block;
+    animation-name: move1;
+    animation-direction: normal;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    z-index: -3;
+}
+
+#car2,
+#car3,
+#car4,
+#car5,
+#car6 {
+    display: none;
+}
+
+
+
+#car1,
+#car2,
+#car3,
+#car4,
+#car5,
+#car6 {
+    width: 100%;
+    height: 1000px;
+    top: 0px;
+    margin-left: -325px;
+}
+
+
+#picPage {
+    margin-top: -50px;
+}
+
+#picPage>ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 45%;
+
+}
+
+
+#picPage>ul>li {
+    font-style: normal;
+    font-weight: 700;
+    margin: 15px;
+    color: white;
+    z-index: -0;
+    cursor: pointer;
+}
+
+#carText2,
+#carText3,
+#carText4,
+#carText5,
+#carText6 {
+    display: none;
+}
+
+#carText1 {
+    position: absolute;
+    right: 20%;
+    top: 300px;
+    width: 650px;
+    font-family: "현대폰트";
+    font-weight: 400;
+    color: white;
+    animation-name: textmove1;
+    animation-direction: normal;
+    animation-duration: 1.3s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+
+#carText1>h1 {
+    font-weight: 700;
+    font-size: 60px;
+    margin-bottom: 30px;
+}
+
+#carText1>span {
+    line-height: 30px;
+    font-size: 20px;
+}
+
+#carText2 {
+    position: absolute;
+    width: 800px;
+    top: 200px;
+    font-family: "현대폰트";
+    font-weight: 400;
+    color: white;
+    animation-name: textmove2;
+    animation-direction: normal;
+    animation-duration: 1.3s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+
+#carText2>h1 {
+    font-weight: 700;
+    font-size: 80px;
+    margin-bottom: 30px;
+}
+
+#carText2>span {
+    line-height: 30px;
+    font-size: 20px;
+}
+
+
+#carText4 {
+    position: absolute;
+    width: 500px;
+    top: 600px;
+    font-family: "현대폰트";
+    font-weight: 400;
+    color: white;
+    animation-name: textmove3;
+    animation-direction: normal;
+    animation-duration: 1.3s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+
+#carText4>h1 {
+    font-weight: 700;
+    font-size: 100px;
+    margin-bottom: 30px;
+}
+
+#carText4>span {
+    line-height: 30px;
+    font-size: 30px;
+}
+
+#carText5 {
+    position: absolute;
+    width: 500px;
+    top: 150px;
+    font-family: "현대폰트";
+    font-weight: 400;
+    color: white;
+    animation-name: textmove2;
+    animation-direction: normal;
+    animation-duration: 1.3s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+
+#carText5>h1 {
+    font-weight: 700;
+    font-size: 80px;
+    margin-bottom: 30px;
+}
+
+#carText5>span {
+    line-height: 30px;
+    font-size: 20px;
+}
+
+
+#carText6 {
+    position: absolute;
+    width: 500px;
+    top: 150px;
+    font-family: "현대폰트";
+    font-weight: 400;
+    color: rgb(24, 24, 24);
+    animation-name: textmove4;
+    animation-direction: normal;
+    animation-duration: 1.3s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+
+#carText6>h1 {
+    font-weight: 700;
+    font-size: 100px;
+    margin-bottom: 30px;
+}
+
+#carText6>span {
+    line-height: 30px;
+    font-size: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+/****************************************************************************/
+
+/*****************************바디 내용 관련 ********************************/
+
+
+
+/* bodytitle*/
+
+
+
+.bodyMenuContainer {
+    width: 100%;
+    height: 3000px;
+}
+
+.dynamicMenu {
+    margin-left: 550px;
+    width: 800px;
+    height: 100px;
+    border-radius: 50px;
+    background-color: rgba(252, 252, 252, 0.062);
+}
+
+.dynamicMenu:hover {
+    transition: 0.8s ease-out;
+    background-color: rgb(250, 250, 250, 0.8);
+}
+
+.dynamicMenu>ul {
+    justify-content: center;
+    display: flex;
+}
+
+.dynamicMenu>ul>li {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.dynamicMenu>ul>li>img {
+    position: absolute;
+    cursor: pointer;
+    margin-top: 27px;
+    height: 60px;
+}
+
+.dynamicMenu>ul>li>span {
+    line-height: 30px;
+
+}
+
+#span1 {
+    margin-left: 5px;
+}
+
+
+
+.dynamicMenu>ul>li>img:hover {
+    transition: 1s ease-out;
+    border-radius: 50%;
+    border: 1px solid rgba(13, 13, 14, 0.61);
+    transition: all 0.2s ease;
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+        7px 7px 20px 0px rgba(0, 0, 0, .1),
+        4px 4px 5px 0px rgba(0, 0, 0, .1);
+}
+
+
+
+
+.bodyTitle1 {
+    margin-top: 500px;
+    text-align: center;
+}
+
+.bodyTitle1>h1 {
+    font-family: "현대폰트";
+    font-weight: 600;
+    font-size: 50px;
+    text-align: center;
+}
+
+.bodyTitle1>h3 {
+    font-size: 17px;
+    margin: 50px;
+    color: gray;
+    text-align: center;
+
+}
+
+.bodyMenu1 {
+    margin: 150px;
+    background-image: url(/pictures/충전.png);
+    background-size: cover;
+    height: 800px;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 1;
+}
+
+
+.bodyMenu1>.bmList {
+    position: absolute;
+    top: 300px;
+    left: 200px;
+    width: 400px;
+    height: 300px;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.bmList>:first-child {
+    margin-top: 80px;
+    font-family: "현대폰트";
+    font-weight: 600;
+    color: white;
+    font-size: 30px;
+    margin-bottom: 50px;
+}
+
+.bmList>:nth-child(2),
+.bmList>:nth-child(3) {
+    width: 200px;
+    line-height: 45px;
+    margin: 0px 0px 20px 100px;
+    background-color: rgba(28, 105, 212, 0.699);
+    height: 50px;
+    border-radius: 5px;
+    font-family: "나눔고딕";
+    font-weight: 600;
+    color: white;
+    font-size: 15px;
+}
+
+.bmList>:nth-child(2):hover,
+.bmList>:nth-child(3):hover {
+    cursor: pointer;
+    background-color: rgba(17, 65, 133, 0.699);
+
+}
+
+
+
+
+.bodyTitle2 {
+    margin-top: 300px;
+    text-align: center;
+}
+
+.bodyTitle2>h1 {
+    font-family: "현대폰트";
+    font-weight: 600;
+    font-size: 50px;
+
+}
+
+.bodyTitle2>h3 {
+    font-size: 17px;
+    margin: 50px;
+    color: gray;
+
+}
+
+.bodyMenu2 {
+
+    width: 100%;
+
+}
+
+
+.bmList2 {
+    display: flex;
+    flex-direction: row;
+    margin: 150px;
+
+}
+
+
+#bm4,
+#bm5 {
+    width: 100%;
+    height: 800px;
+}
+
+#bm6,
+#bm7 {
+    height: 400px;
+}
+
+
+#bm4 {
+    background-image: url(/pictures/아이오닉1.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: "현대폰트";
+    color: white;
+    font-size: 50px;
+    position: relative;
+}
+
+#bm5 {
+    color: white;
+    font-size: 50px;
+    position: relative;
+}
+
+#bm4Bgc>div>h1 {
+    margin: 50px;
+    font-weight: 600;
+}
+
+#bm4Bgc>div>h3 {
+    font-family: "나눔고딕blod";
+    font-family: 500;
+    font-style: italic;
+    font-size: 18px;
+    margin: 50px;
+}
+
+#bm6Bgc>div>h1 {
+    margin: 50px;
+    font-weight: 600;
+}
+
+#bm6Bgc>div>h3 {
+    font-family: "나눔고딕blod";
+    font-family: 500;
+    font-style: italic;
+    font-size: 18px;
+    margin: 50px;
+}
+
+#bm7Bgc>div>h1 {
+    margin: 50px;
+    font-weight: 600;
+}
+
+#bm7Bgc>div>h3 {
+    font-family: "나눔고딕blod";
+    font-family: 500;
+    font-style: italic;
+    font-size: 18px;
+    margin: 50px;
+}
+
+#bm4Bgc,
+#bm6Bgc,
+#bm7Bgc {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+#bm6Bgc,
+#bm7Bgc {
+    height: 50%;
+}
+
+
+
+#bm6 {
+    background-image: url(/pictures/아이오닉3.gif);
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#bm7 {
+    background-image: url(/pictures/아이오닉4.gif);
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+
+
+.bodyTitle3 {
+    margin-top: 300px;
+    text-align: center;
+}
+
+.bodyTitle3>h1 {
+    font-family: "현대폰트";
+    font-weight: 600;
+    font-size: 50px;
+
+}
+
+.bodyTitle3>h3 {
+    font-size: 17px;
+    margin: 50px;
+    color: gray;
+
+}
+
+
+.adList>ul{
+    display: flex;
+    margin-top: 250px;
+}
+
+.adList>ul>li>img{
+    height: 420px;
+}
+
+.adList>ul{
+    margin-left: 0px;
+}
+
+.adList>div{
+    text-align: center;
+}
+
+
+.adListBtn{
+    color: rgb(54, 54, 54);
+    font-size: 80px;
+    cursor: pointer;
+}
+
+
+.adListBtn>.leftBtn2{
+    margin-top: 170px;
+    position: absolute;
+    left: 100px;
+    z-index: 5;
+}
+
+.adListBtn>.rightBtn2{
+    margin-top: 170px;
+    position: absolute;
+    right: 100px;
+     z-index: 5;
+}
+
+.adSlider>ul>div{
+    font-family: "현대폰트m";
+    font-size: 30px;
+
+}
+#adSlider>li>div>h1{
+    text-align: center;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
+#adSlider>li>div>h3{
+    text-align: center;
+    font-weight: 500;
+    margin-top: 15px;
+    line-height: 30px;
+    font-size: 18px;
+}
+
+#adSlider1{
+    position: relative;
+   
+}
+
+#adSlider>li>span{
+    display: none;
+    position: absolute;
+    margin: 200px 240px;
+    width: 200px;
+    font-size: 30px;
+    color: white;
+    z-index: 1;
+    
+}
+
+#adSlider>li>#adbgc1,
+#adSlider>li>#adbgc2,
+#adSlider>li>#adbgc3,
+#adSlider>li>#adbgc4,
+#adSlider>li>#adbgc5,
+#adSlider>li>#adbgc6{
+    position: absolute;
+    display: none;
+    width: 635px;
+    height: 420px;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+
+
+
+
+
+
+/******************************************************************************/
