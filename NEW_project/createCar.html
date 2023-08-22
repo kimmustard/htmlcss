@@ -13,21 +13,30 @@
 
 <body>
     <div id="bgcOverray"></div>
-
     <header>
         <div class="headerContainer">
             <ul class="headerTitle1">
                 <li><img id="mainLogo" src="/pictures/logo3.png" alt="" width="160" height="25"></li>
-                <li>　|　아이오닉5</li>
-                <li>종료　<i class="bi bi-box-arrow-right"></i></li>
+                <li id="carName1">
+
+                </li>
+                <li id=mainExit>종료　<i class="bi bi-box-arrow-right"></i></li>
             </ul>
 
 
             <ul class="headerTitle2">
-                <li>01　　모델 선택　　|</li>
-                <li>02　　내 차 만들기</li>
+                <li id="headerTitleText1">01　　모델 선택　　|</li>
+                <li id="headerTitleText2">02　　내 차 만들기</li>
+                <li id="headerTitleText3"></li>
                 <li id="info">요약보기　　　<i class="bi bi-chevron-down"></i></li>
             </ul>
+            <div id="exitBox">
+                <h1> 내 차 만들기를 종료하시겠습니까?</h1>
+                <div>
+                    <button id="resultBtn1" type="button">종료하기</button>
+                    <button id="resultBtn2" type="button">취소하기</button>
+                </div>
+            </div>
 
 
         </div>
@@ -35,10 +44,11 @@
         <div class="infoContainer">
             <div id="summaryInfo">
                 <div id="infoBox">
-                    <h1>나의 아이오닉 5</h1>
+                    <h1 id="carName2"></h1>
                     <h3>
-                        요약보기
+                        <br>
                     </h3>
+                    <div></div>
 
                 </div>
             </div>
@@ -48,15 +58,18 @@
     </header>
 
 
+    <div id="loadingBox1">
+        <h1>잠시만 기다려주세요.</h1>
+    </div>
 
-    <section>
+    <section id="section1">
 
         <div class="bodyContainer">
             <div class="carModelContainer">
                 <div id="carModelList">
-                    <h1>아이오닉 5 - Exclusive(스탠다드) 19인치</h1>
+                    <h1 id="carName3"></h1>
                     <ul>
-                        <li>아이오닉 5 전기차 Exclusive(스탠다드) 19인치 오토</li>
+                        <li id="carName4"></li>
                         <li>총 차량 가격</li>
                         <li>52,720,000 원</li>
                     </ul>
@@ -65,34 +78,108 @@
                 <div class="carStateData">
                     <i id="leftBtn" class="leftBtn2 bi-chevron-left"></i>
                     <i id="rightBtn" class="rightBtn2 bi-chevron-right"></i>
-                    <div id="carModel">
-                        <img id="modelView" src="/pictures/아이오닉5/1.png">
+                    <div id="modelBgc">
 
                     </div>
+                    <div id="outColorBgc">
+
+                    </div>
+                    <div id="carModel">
+
+                    </div>
+
+
+
+                </div>
+
+
+                <div class="carStateText">
+                    <h1>* 상기 이미지는 내/외장 색상 선택을 돕기 위한 참고용으로 제공되고 있습니다.</h1>
                 </div>
             </div>
 
             <div class="carStateContainer">
+
+                <div class="outCarColor">
+                    <h1>COLOR SELECT</h1>
+                    <h3>외장 색상</h3>
+                    <ul>
+                        <li id="outCarColor1">
+                            <i class="bi bi-check-square-fill"></i>
+                        </li>
+                        <li id="outCarColor2">
+
+                        </li>
+                        <li id="outCarColor3">
+
+                        </li>
+                    </ul>
+
+                </div>
+
+                <div class="inCarColor">
+                    <h3>내장 색상</h3>
+                    <ul>
+                        <li id="inCarColor1">
+
+                        </li>
+                        <li id="inCarColor2">
+
+                        </li>
+                    </ul>
+
+                </div>
+
+
+
+                <div>
+                    <a href="#"><button id="resultBtn" type="button">내 차 만들기 완료</button></a>
+                </div>
+
+
             </div>
+
+
+        </div>
         </div>
 
 
     </section>
 
 
+    <section2 id="section2">
+
+
+        <div id="btnBox">
+            <i id="leftBtn5" class="leftBtn2 bi-chevron-left"></i>
+            <i id="rightBtn5" class="rightBtn2 bi-chevron-right"></i>
+        </div>
+        <div class="resultModelContainer">
+            <div id="resultBgc">
+                <h1 id="carName5">
+
+                </h1>
+
+                <h3 id="carName6">
+
+                </h3>
+
+
+                <img id="firecracker" src="/pictures/폭죽.gif" alt="">
+                <div id="modelBox">
+                </div>
+                <h4>* 상기 이미지는 내/외장 색상 선택을 돕기 위한 참고용으로 제공되고 있습니다.</h4>
+            </div>
 
 
 
 
+        </div>
 
 
 
 
-
-
-
-
-
+    </section2>
 
 
 
@@ -185,6 +272,7 @@
 
     </footer>
     <script src="createCar.js"></script>
+
 </body>
 
 </html>

@@ -4,6 +4,7 @@
     font-family: "현대폰트";
     src: url(/font/현대하모니+L.ttf);
 }
+
 @font-face {
     font-family: "현대폰트m";
     src: url(/font/현대하모니+M.ttf);
@@ -690,19 +691,19 @@ footer {
     display: flex;
 }
 
-.dynamicMenu>ul>li {
+.dynamicMenu>ul>a>li {
     margin-left: 20px;
     margin-right: 20px;
 }
 
-.dynamicMenu>ul>li>img {
+.dynamicMenu>ul>a>li>img {
     position: absolute;
     cursor: pointer;
     margin-top: 27px;
     height: 60px;
 }
 
-.dynamicMenu>ul>li>span {
+.dynamicMenu>ul>a>li>span {
     line-height: 30px;
 
 }
@@ -713,7 +714,7 @@ footer {
 
 
 
-.dynamicMenu>ul>li>img:hover {
+.dynamicMenu>ul>a>li>img:hover {
     transition: 1s ease-out;
     border-radius: 50%;
     border: 1px solid rgba(13, 13, 14, 0.61);
@@ -953,51 +954,52 @@ footer {
 }
 
 
-.adList>ul{
+.adList>ul {
     display: flex;
     margin-top: 250px;
 }
 
-.adList>ul>li>img{
+.adList>ul>li>img {
     height: 420px;
 }
 
-.adList>ul{
+.adList>ul {
     margin-left: 0px;
 }
 
-.adList>div{
+.adList>div {
     text-align: center;
 }
 
 
-.adListBtn{
+.adListBtn {
     color: rgb(54, 54, 54);
     font-size: 80px;
     cursor: pointer;
 }
 
 
-.adListBtn>.leftBtn2{
+.adListBtn>.leftBtn2 {
     margin-top: 170px;
     position: absolute;
     left: 100px;
     z-index: 5;
 }
 
-.adListBtn>.rightBtn2{
+.adListBtn>.rightBtn2 {
     margin-top: 170px;
     position: absolute;
     right: 100px;
-     z-index: 5;
+    z-index: 5;
 }
 
-.adSlider>ul>div{
+.adSlider>ul>div {
     font-family: "현대폰트m";
     font-size: 30px;
 
 }
-#adSlider>li>div>h1{
+
+#adSlider>li>div>h1 {
     text-align: center;
     font-weight: 600;
     margin-top: 10px;
@@ -1005,7 +1007,7 @@ footer {
     font-size: 30px;
 }
 
-#adSlider>li>div>h3{
+#adSlider>li>div>h3 {
     text-align: center;
     font-weight: 500;
     margin-top: 15px;
@@ -1013,12 +1015,12 @@ footer {
     font-size: 18px;
 }
 
-#adSlider1{
+#adSlider1 {
     position: relative;
-   
+
 }
 
-#adSlider>li>span{
+#adSlider>li>span {
     display: none;
     position: absolute;
     margin: 200px 240px;
@@ -1026,7 +1028,7 @@ footer {
     font-size: 30px;
     color: white;
     z-index: 1;
-    
+
 }
 
 #adSlider>li>#adbgc1,
@@ -1034,7 +1036,7 @@ footer {
 #adSlider>li>#adbgc3,
 #adSlider>li>#adbgc4,
 #adSlider>li>#adbgc5,
-#adSlider>li>#adbgc6{
+#adSlider>li>#adbgc6 {
     position: absolute;
     display: none;
     width: 635px;

@@ -41,13 +41,19 @@ html {
     user-select: none;
 }
 
+section {
+    display: block;
+}
+
+
+
 
 /*********************************footer div *********************************/
 
 footer {
 
     background-color: rgb(28, 28, 28);
-    margin-top: 50%;
+
 
 }
 
@@ -158,8 +164,8 @@ footer {
     background-color: rgb(0, 0, 0, 0.8);
     position: absolute;
     width: 100%;
-    z-index: -5;
     transform: all 1.5s ease-out;
+    z-index: 3;
 }
 
 
@@ -237,9 +243,10 @@ header {
     width: 500px;
     height: 300px;
     background-color: rgb(255, 255, 255);
-    border-radius: px;
+    border-radius: 10px;
     top: 16px;
     right: 40px;
+    z-index: 10;
 }
 
 #infoBox {
@@ -253,7 +260,58 @@ header {
     font-size: 20px;
 }
 
+#info {
+    z-index: 10;
+}
 
+#mainExit {
+    z-index: 10;
+}
+
+#exitBox {
+    display: none;
+    position: absolute;
+    width: 500px;
+    height: 300px;
+    background-color: white;
+    top: 350px;
+    left: 650px;
+    z-index: 10;
+    border-radius: 20px;
+
+}
+
+#exitBox>div {
+    margin-left: 50px;
+}
+
+#exitBox>div>button {
+    background-color: rgb(28, 105, 212);
+    border-radius: 5px;
+    font-family: "나눔고딕";
+    font-weight: 600;
+    font-size: 17px;
+    color: white;
+    border: none;
+    width: 150px;
+    height: 40px;
+    margin-left: 30px;
+    margin-top: 100px;
+    cursor: pointer;
+}
+
+#exitBox>div>button:hover {
+    transition: 0.5s;
+    background-color: rgb(0, 25, 59);
+}
+
+#exitBox>h1 {
+    text-align: center;
+    margin-top: 100px;
+    font-family: "현대폰트";
+    font-weight: 500;
+    font-size: 22px;
+}
 
 /**********************************************************************/
 
@@ -267,7 +325,7 @@ header {
 
 
 
-/****************************body*****************************/
+/***************************OutCarColor body*****************************/
 
 
 
@@ -292,6 +350,7 @@ header {
 
 #carModelList {
     padding: 50px 80px;
+
 }
 
 #carModelList>h1 {
@@ -335,10 +394,53 @@ header {
     margin-top: -40px;
 }
 
+.carStateText {
+    position: absolute;
+    font-family: "현대폰트";
+    font-family: 600;
+    color: white;
+    font-size: 17px;
+    left: 150px;
+    top: 830px;
+}
+
+#modelBgc {
+    position: absolute;
+    width: 100%;
+    top: 50px;
+    left: -100px;
+    height: 500px;
+    background-image: url(/pictures/360도bgc.png);
+    background-repeat: no-repeat;
+    z-index: 0;
+}
+
+#outColorBgc {
+    position: absolute;
+    width: 100%;
+    left: -100px;
+    z-index: 2;
+}
+
+
+
+#outBtn {
+    position: absolute;
+    background-color: transparent;
+    color: white;
+    margin: 10px;
+    width: 50px;
+    font-size: 40px;
+    border: none;
+    right: 15%;
+    cursor: pointer;
+}
+
 
 #leftBtn,
 #rightBtn {
     margin-top: 200px;
+    z-index: 1;
 }
 
 #leftBtn {
@@ -363,3 +465,212 @@ header {
 }
 
 /***************************************************************/
+
+
+
+
+
+/****************************InCarColor*****************************/
+
+.outCarColor,
+.inCarColor {
+    font-family: "현대폰트b";
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 50px;
+}
+
+.outCarColor>h1 {
+    color: white;
+    font-family: 600;
+    font-size: 35px;
+    margin-bottom: 50px;
+
+}
+
+.outCarColor>ul {
+    font-size: 25px;
+    display: flex;
+}
+
+.outCarColor>h3 {
+    font-family: "현대폰트";
+    color: white;
+    font-size: 25px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid white;
+}
+
+
+
+#outCarColor1,
+#outCarColor2,
+#outCarColor3 {
+    margin: 20px;
+    width: 125px;
+    height: 125px;
+    cursor: pointer;
+}
+
+#outCarColor1 {
+    background-color: rgb(149, 146, 143);
+}
+
+#outCarColor2 {
+    background-color: rgb(25, 25, 25);
+}
+
+#outCarColor3 {
+    background-color: rgb(243, 244, 250);
+}
+
+
+.inCarColor>h3 {
+    font-family: "현대폰트";
+    color: white;
+    font-size: 25px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid white;
+}
+
+.inCarColor>ul>li {
+    margin-top: 30px;
+}
+
+#inCarColor1,
+#inCarColor2 {
+    width: 100%;
+    height: 80px;
+    cursor: pointer;
+}
+
+
+
+#inCarColor1 {
+    background-image: url(/pictures/아이오닉_내장색상1.png);
+}
+
+#inCarColor2 {
+    background-image: url(/pictures/아이오닉_내장색상2.png);
+}
+
+
+
+#resultBtn {
+    font-family: "현대폰트";
+    font-size: 20px;
+    font-weight: 600;
+    border: none;
+    border-radius: 15px;
+    width: 300px;
+    height: 50px;
+    margin: 30px;
+    margin-top: 50px;
+    margin-left: 130px;
+}
+
+#resultBtn:hover {
+    color: white;
+    background-color: rgb(63, 63, 63);
+    transition: 0.5s;
+}
+
+
+/*****************************************************************/
+
+
+
+
+/**********************************새 페이지************************************/
+
+section2 {
+    display: none;
+}
+
+
+.resultModelContainer {
+    position: relative;
+    width: 100%;
+    height: 1000px;
+    background-image: url(/pictures/차만들기배경.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: '현대폰트b';
+    text-align: center;
+    z-index: -2;
+
+}
+
+#resultBgc>h1 {
+    padding-top: 80px;
+    font-family: 700;
+    font-size: 40px;
+    text-align: center;
+}
+
+#resultBgc>h3 {
+    padding: 50px;
+}
+
+
+
+#leftBtn5,
+#rightBtn5 {
+    margin-top: 350px;
+    cursor: pointer;
+    top: 200px;
+}
+
+#leftBtn5 {
+    position: absolute;
+    color: white;
+    font-size: 100px;
+    left: 400px;
+    cursor: pointer;
+}
+
+#rightBtn5 {
+    position: absolute;
+    color: white;
+    font-size: 100px;
+    right: 440px;
+    cursor: pointer;
+}
+
+#firecracker {
+    display: block;
+    position: absolute;
+    left: 650px;
+    top: 200px;
+    width: 600px;
+    height: 500px;
+    z-index: -1;
+}
+
+#loadingBox1 {
+    display: none;
+    position: absolute;
+    background-color: white;
+    background-image: url(/pictures/로딩.gif);
+    background-position: 75px 25px;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    top: 400px;
+    right: 50%;
+    width: 250px;
+    height: 150px;
+    z-index: 3;
+}
+
+#loadingBox1>h1 {
+    font-family: '현대폰트m';
+    font-style: oblique;
+    font-size: 19px;
+    text-align: center;
+    margin-top: 90px;
+}
+
+
+/**********************************************************************/
